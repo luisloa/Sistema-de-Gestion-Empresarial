@@ -1,0 +1,50 @@
+{% load static %}
+
+
+<div class="app-container">
+
+  <!-- Sidebar lateral -->
+  <aside class="sidebar">
+    <header class="sidebar-header">
+      <h1>Sistema de Gestión de Empresarial</h1>
+    </header>
+
+    <!-- Menú de navegación -->
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="#">Productos</a></li>
+        <li><a href="#">Ventas</a></li>
+        <li><a href="#" onclick="cargarEmpleados(); return false;">Empleados</a></li>
+        <li><a href="#">Registrar</a></li>
+        <li><a href="#">Reportes</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Área derecha -->
+  <div class="main-content-area">
+
+    <!-- Información de usuario -->
+    <section class="user-info">
+      <div class="contenido">
+        <div class="datos">
+          <ul>
+            <li><strong>Nombre:</strong> Luis Enrique Jimenez Loa</li>
+            <li><strong>Sesión:</strong> Activa</li>
+          </ul>
+        </div>
+        <div class="foto">
+          <img src="{% static 'imagenes/foto.jpeg' %}" alt="Foto de perfil" />
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Contenido principal -->
+    <main class="main-content">
+      <img class="img-content" src="{% static 'imagenes/portada.jpg' %}" alt="">
+    </main>
+
+  </div>
+
+</div>

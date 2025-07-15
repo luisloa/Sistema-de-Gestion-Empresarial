@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Detalle de un Empleado</h1>
+    </div>
+    {{detalles}}
+
+    <div>
+        <h3>Datos del empleado</h3>
+        <p>ID: {{detalles.id}}</p>
+        <p>Nombre: {{detalles.first_name}}</p>
+        <p>Apellido: {{detalles.last_name}}</p>
+        <p>Puesto: {{detalles.job}}</p>
+        <p>Departamento: {{detalles.departamento}}</p>
+        <p>Habilidades: {{detalles.habilidades}}</p>
+        <p>Hoja de vida: {{detalles.hoja_vida}}</p>
+    </div>
+</body>
+</html>

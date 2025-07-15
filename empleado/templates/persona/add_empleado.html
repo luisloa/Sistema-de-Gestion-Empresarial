@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/persona/estilos_add_empleado.css' %}">
+    <title>Document</title>
+</head>
+<body class="bg-linear-to-tr">
+    
+
+    <div class="contenedor-principal">
+        <div class="titulo">
+            <h1>Registrar Empleado</h1>
+        </div>
+    
+        <form method="post">
+            {% csrf_token %}
+            {% for field in form %}
+                <div class="form-group">
+                    {{ field.label_tag }}
+                    {{ field }}
+                    {% if field.errors %}
+                        <div class="error">{{ field.errors }}</div>
+                    {% endif %}
+                </div>
+            {% endfor %}
+
+            <div>
+            <button type="submit" class="boton">Registrar</button>
+            </div>
+        </form>
+
+     {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                {{ message }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        {% endfor %}
+    {% endif %}
+
+    <script>
+        setTimeout(() => {
+            const alert = document.querySelector('.alert');
+            if(alert) alert.remove();
+        }, 8000);
+    </script>
+
+</body>
+</html>

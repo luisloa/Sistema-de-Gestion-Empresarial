@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/persona/estilos_add_empleado.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    
+    <body class="bg-linear-to-tr">
+    <div class="contenedor-principal">
+        <div class="titulo">
+            <h1>Borrar Empleado</h1>
+        </div>
+
+        <div>
+            <p>Nombre: {{empleado.first_name}}</p>
+            <p>Apellido: {{empleado.last_name}}</p>
+            <p>Puesto: {{empleado.job}}</p>
+            <p>Departamento: {{empleado.departamento}}</p>
+        </div>
+    
+        <div class="formulario">
+            <form method="post">
+                {% csrf_token %}
+
+                <div>
+                    <button type="submit" class="boton">Borrar Empleado <br>(confirmar)</button>
+                </div>
+                
+            </form>
+        </div>  
+    </div>
+</body>
+</html>

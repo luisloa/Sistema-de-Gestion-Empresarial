@@ -1,0 +1,41 @@
+{% load static %}
+
+<h1>Lista de Empleados</h1>
+
+
+<!-- Barra de búsqueda -->
+<section class="search">
+    <form onsubmit="empleadoPorBusqueda(); return false"> 
+        <div class="search-bar">
+            <input type="text" id="kword" name="kword" placeholder="Buscar por nombre, apellido o id" />
+            <button type="submit" class="success button">Buscar</button>
+        </div>
+    </form>
+</section>
+
+
+<section class="empleado">
+    {% for empleado in lista_todos_empleados %}
+        <a href="#">
+            <section class="user-containt">
+                <div class="div1">
+                    {% if empleado.image %}
+                        <img class="foto-empleado" src="{{empleado.image.url}}" alt="">
+                    {%else%}
+                        <p>Sin imagen </p>
+                    {% endif %}
+                </div>
+                <div class="div2">
+                    <p> <b>ID:</b> {{empleado.id}} <br>
+                    <b>Nombre:</b> {{ empleado.first_name }} {{empleado.last_name}} <br>
+                    <b>Puesto:</b> {{empleado.get_job_display}} <br>
+                    <b>Departamento:</b> {{empleado.departamento.name}}</p>
+                </div>
+            </section>
+        </a> 
+    {% endfor %}
+</section>
+  
+
+       
+

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habilidades Persona</title>
+</head>
+<body>
+    <h1>Lista de Habilidades de un Empleado</h1>
+    <form method="get">{% csrf_token %}
+        <input type="text" id="kword" name="kword" placeholder="Buscar por Empleado">
+        <button type="submit">Buscar</button>
+    </form>
+    <br>
+    <table border="1">
+        <caption>Listado Habilidades</caption>
+        <tr>
+            <th>Nombre</th>
+            <th>Habilidades</th>
+        </tr>
+            {% for empleado in listar_habilidades_persona %}
+            <tr>
+                <td>{{empleado.first_name}}&nbsp{{empleado.last_name}}</td>
+                <td>
+                    <ul>
+                        
+                        {% for habilidad in empleado.habilidades.all %}
+                            <li>{{habilidad.habilidad}}</li>
+                        {% endfor %}
+                    </ul>
+                </td>
+            </tr>
+            {% endfor %}  
+    </table>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Listar Empleados Por Trabajo</h1>
+    <form method="get">{% csrf_token %}
+        <label for="kword">Elija el puesto de trabajo: </label><br />
+        <select id="kword" name="kword" multiple="False">
+            <option value="0"></option>
+            <option value="1">Administrador</option>
+            <option value="2">Economista</option>
+            <option value="3">Desarrollador</option>
+            <option value="4">Jefe de Turno</option>
+            <option value="5">Jefe de Plaza</option>
+            <option value="6">Cajero</option>
+            <option value="7">Director de tramo</option>
+            <option value="8">Analista liquidador</option>
+            <option value="9">Monitorista</option>
+            <option value="10">Contador</option>
+            <option value="11">Otro</option>
+        </select>
+
+        <button type="submit">Buscar</button>
+    </form>
+
+    <ul>
+        {% for empleado in empleados %}
+        <li>{{empleado}}</li>
+    {% endfor %}
+    </ul>
+    
+        
+</body>
+</html>

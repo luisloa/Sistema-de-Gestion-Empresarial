@@ -1,0 +1,85 @@
+.user-containt {
+    display: flex;
+    width: 48%;
+    float: left;
+    padding: 10px;
+    margin: 5px 10px 5px 10px;
+    list-style: none;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    align-items: center;
+}
+
+h1{
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: grey;
+  margin: 10px;
+}
+
+
+/* Seccion para mostrar empleados */
+.user-containt div{
+    float: left;
+    display: flex;
+    align-items: center;
+}
+
+.div2 p{
+    font-size: 14px;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 10px;
+}
+
+.foto-empleado{
+    width: 100px;              
+    height: 100px;
+    border-radius: 15px;       
+    object-fit: cover;        
+    object-position: top;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); 
+}
+
+/* ===== Buscador ===== */
+
+.search form{
+  padding-bottom: 10px;
+  padding-left: 10px;
+  margin: auto;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.search-bar input {
+  flex: 1;
+  min-width: 0;
+  max-width: 400px;
+  padding: 6px 10px;
+  border-radius: 15px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+}
+
+.search-bar button {
+  padding: 6px 15px;
+  border-radius: 15px;
+  border: none;
+  background-color: #3498db;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+  white-space: nowrap;
+}
+
+.search-bar button:hover {
+  background-color: #2980b9;
+}
+
+
