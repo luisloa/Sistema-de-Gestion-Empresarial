@@ -15,4 +15,4 @@ class Departamento(models.Model):
         unique_together = ('name', 'shor_name')
     
     def __str__(self):
-        return f'{self.id}, {self.name}'
+        return f'{self.id} - {self.name}'

@@ -2,7 +2,6 @@
 
 <h1>Lista de Empleados</h1>
 
-
 <!-- Barra de búsqueda -->
 <section class="search">
     <form onsubmit="empleadoPorBusqueda(); return false"> 
@@ -13,10 +12,9 @@
     </form>
 </section>
 
-
 <section class="empleado">
     {% for empleado in lista_todos_empleados %}
-        <a href="#">
+        <a href="{% url 'persona_app:empleado_detail' empleado.id %}" class="empleado_detail">
             <section class="user-containt">
                 <div class="div1">
                     {% if empleado.image %}

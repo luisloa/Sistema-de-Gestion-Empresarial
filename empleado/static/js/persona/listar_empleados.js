@@ -18,8 +18,7 @@
 // Funcion para dar clic en buscar empleado en la consola central. 
 function empleadoPorBusqueda(){
     const kword = document.getElementById("kword").value
-    console.log("Buscando:", kword); 
-    console.log("Buscando:", kword); 
+   
     fetch(`listar-todos-empleados/?kword=${encodeURIComponent(kword)}`)
     .then(response => {
         if(!response.ok) throw new Error("Error en la carga de empleado.")

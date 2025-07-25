@@ -6,6 +6,7 @@ from .models import Proveedor
 @admin.register(Proveedor)
 class ProductoAdmin(admin.ModelAdmin):
     list_display = (
+        'id',
         'name',
         'address', 
         'telephone_number',

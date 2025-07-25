@@ -20,7 +20,6 @@ INSTALLED_APPS = [
     # Local apps
     'applications.departamento',
     'applications.persona',
-    'applications.home',
     'applications.productos',
     'applications.proveedor',
     'applications.depart_productos',

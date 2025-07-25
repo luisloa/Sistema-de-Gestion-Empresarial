@@ -18,6 +18,6 @@ class Proveedor(models.Model):
         verbose_name_plural = ("Proveedores")
 
     def __str__(self):
-        return self.name
+        return f'{self.id} - {self.name}'
 
     

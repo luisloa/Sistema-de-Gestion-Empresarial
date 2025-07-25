@@ -1,25 +1,67 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div>
-        <h1>Detalle de un Empleado</h1>
-    </div>
-    {{detalles}}
+{% load static %}
 
-    <div>
-        <h3>Datos del empleado</h3>
-        <p>ID: {{detalles.id}}</p>
-        <p>Nombre: {{detalles.first_name}}</p>
-        <p>Apellido: {{detalles.last_name}}</p>
-        <p>Puesto: {{detalles.job}}</p>
-        <p>Departamento: {{detalles.departamento}}</p>
-        <p>Habilidades: {{detalles.habilidades}}</p>
-        <p>Hoja de vida: {{detalles.hoja_vida}}</p>
+<div class="first-container">
+        <section class="user-containt-detail">
+        <div class="div1">
+            {% if empleado.image %}
+                <img class="foto-empleado" src="{{empleado.image.url}}" alt="">
+            {%else%}
+                <p>Sin imagen</p>
+            {% endif %}
+        </div>
+        <div class="div2">
+            <ul>
+                <li><p><b>ID:</b> {{detalles.id}}</p></li>
+                <li><p><b>Nombre:</b> {{detalles.first_name}}</p></li>
+                <li><p><b>Apellido:</b> {{detalles.last_name}}</p></li>
+                <li><p><b>Puesto:</b> {{detalles.get_job_display}}</p></li>
+                <li><p><b>Departamento:</b> {{detalles.departamento}}</p></li>
+                <li><p><b>Habilidades:</b>
+                {% for habilidad in detalles.habilidades.all %}
+                    {{habilidad}},
+                {% endfor %}</p></li>
+                <li><p><b>Hoja de vida:</b> {{detalles.hoja_vida}}</p></li>
+            </ul>
+            
+        </div>
+    </section>
+    <div class="document">
+        <a href=""></a>
     </div>
-</body>
-</html>
+    <div class="document">
+        <a href=""></a>
+    </div>
+    <div class="document">
+        <a href=""></a>
+    </div>
+    <div class="document">
+        <a href=""></a>
+    </div>
+    <div class="document">
+        <a href=""></a>
+    </div>
+    <div class="document">
+        <a href=""></a>
+    </div>
+    <div class="document">
+        <a href=""></a>
+    </div>
+    <div class="document">
+        <a href=""></a>
+    </div>
+    <div class="document">
+        <a href=""></a>
+    </div>
+    <div class="document">
+        <a href=""></a>
+    </div>
+    <div class="document">
+        <a href=""></a>
+    </div>
+    <div class="document">
+        <a href=""></a>
+    </div>
+</div>
+
+
+

@@ -13,6 +13,6 @@ class DepartamentoProductos(models.Model):
         verbose_name_plural = ("Depatatamentos de productos")
 
     def __str__(self):
-        return self.name
+        return f'{self.id} - {self.name}'
 
     

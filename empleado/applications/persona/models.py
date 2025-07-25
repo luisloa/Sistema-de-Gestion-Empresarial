@@ -15,7 +15,7 @@ class Habilidades(models.Model):
         ordering = ['habilidad']
         
     def __str__(self):
-        return f'ID: {self.id}, {self.habilidad}'
+        return f'{self.habilidad}'
 
 class Empleado(models.Model):
     """ Modelo para tabla Empleado """
@@ -38,7 +38,7 @@ class Empleado(models.Model):
     full_name = models.CharField('Nombre completo', max_length=120, blank=True)
     job = models.CharField('Trabajo', max_length=2, null=False, choices=JOB_CHOICES)
     departamento = models.ForeignKey(Departamento, on_delete=models.CASCADE)
-    image = models.ImageField('', upload_to='media/persona', blank= True, null= True)
+    image = models.ImageField('', upload_to='persona', blank= True, null= True)
     habilidades = models.ManyToManyField(Habilidades)
     hoja_vida = RichTextField('Hoja de vida', max_length=500)
     
@@ -48,4 +48,4 @@ class Empleado(models.Model):
         ordering = ['first_name']
     
     def __str__(self):
-        return f'{self.id}, {self.first_name} {self.last_name}, {self.departamento}'
+        return f'{self.id}, {self.first_name} {self.last_name}, {self.departamento}, '

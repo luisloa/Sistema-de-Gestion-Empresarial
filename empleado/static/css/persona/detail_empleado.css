@@ -1,0 +1,52 @@
+.first-container{
+    width: 100%;
+    display: flex;
+    float: left;
+    grid: 10px;
+}
+
+.user-containt-detail {
+    width: 40%;
+    padding: 10px;
+    margin: 5px;
+    list-style: none;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    align-items: center;
+}
+
+/* Seccion para mostrar empleados */
+.user-containt-detail div{
+    float: left;
+    display: flex;
+    align-items: center;
+}
+
+.user-containt-detail .div2 li{
+    list-style: none;
+    list-style-type: none;
+}
+
+.user-containt-detail .div2 p{
+    font-size: 14px;
+    color: black;       
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 10px;
+}
+
+.user-containt-deail img{
+    width: 100px;              
+    height: 100px;
+    border-radius: 15px;       
+    object-fit: cover;        
+    object-position: top;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); 
+}
+
+.document{
+ border: 2px solid black;
+ width: 150px;
+ height: 150px;  
+ border-radius: 15px; 
+ margin: 5px;
+}

@@ -7,7 +7,7 @@ from applications.depart_productos.models import DepartamentoProductos
 class Producto(models.Model):
     '''Modulo pata tabla Producto'''
 
-    sku = models.PositiveIntegerField("SKU", null=False, unique=True)
+    sku = models.CharField('SKU', max_length=20, null=False)
     name = models.CharField(("Nombre"), max_length=50, null=False)
     cost = models.FloatField(("Precio"), null=False)
     expiration_date = models.DateField(("Fecha de caducidad"), auto_now=False, auto_now_add=False)
